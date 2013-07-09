@@ -26,4 +26,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pressButton:(id)sender {
+    if ([sender currentTitle] == NULL) {
+        NSLog(@"hi");
+        NSLog(@"%@", [sender currentTitle]);
+        [sender setTitle:@"X" forState:UIControlStateNormal];
+        [sender setTitle:@"X" forState:UIControlStateSelected];
+        [sender setTitle:@"X" forState:UIControlStateHighlighted];
+        [sender setTitle:@"X" forState:UIControlStateReserved];
+        [sender setTitle:@"X" forState:UIControlStateApplication];
+    } else {
+        //Y U NO WORK
+        NSLog(@"%@", [sender currentTitle]);
+        NSLog(@"Please select a different square");
+    }
+}
 @end

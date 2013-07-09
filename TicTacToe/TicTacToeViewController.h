@@ -22,4 +22,6 @@
  @property (weak, nonatomic) IBOutlet UIButton *botLeftField;
  @property (weak, nonatomic) IBOutlet UIButton *botCenterField;
  @property (weak, nonatomic) IBOutlet UIButton *botRightField;
+- (IBAction)pressButton:(id)sender;
+
 @end

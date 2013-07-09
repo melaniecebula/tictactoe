@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800DE089178BE80500FEAF39 /* TicTacToeBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 800DE088178BE80500FEAF39 /* TicTacToeBoard.m */; };
 		80B79CA1178BB69E006FC81A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B79CA0178BB69E006FC81A /* UIKit.framework */; };
 		80B79CA3178BB69E006FC81A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B79CA2178BB69E006FC81A /* Foundation.framework */; };
 		80B79CA5178BB69E006FC81A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B79CA4178BB69E006FC81A /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		800DE087178BE80500FEAF39 /* TicTacToeBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeBoard.h; sourceTree = "<group>"; };
+		800DE088178BE80500FEAF39 /* TicTacToeBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeBoard.m; sourceTree = "<group>"; };
 		80B79C9D178BB69E006FC81A /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B79CA0178BB69E006FC81A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		80B79CA2178BB69E006FC81A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,8 @@
 				80B79CB0178BB69E006FC81A /* TicTacToeAppDelegate.m */,
 				80B79CB8178BB69E006FC81A /* TicTacToeViewController.h */,
 				80B79CB9178BB69E006FC81A /* TicTacToeViewController.m */,
+				800DE087178BE80500FEAF39 /* TicTacToeBoard.h */,
+				800DE088178BE80500FEAF39 /* TicTacToeBoard.m */,
 				80B79CBB178BB69E006FC81A /* TicTacToeViewController.xib */,
 				80B79CA7178BB69E006FC81A /* Supporting Files */,
 			);
@@ -177,6 +182,7 @@
 				80B79CAD178BB69E006FC81A /* main.m in Sources */,
 				80B79CB1178BB69E006FC81A /* TicTacToeAppDelegate.m in Sources */,
 				80B79CBA178BB69E006FC81A /* TicTacToeViewController.m in Sources */,
+				800DE089178BE80500FEAF39 /* TicTacToeBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +305,7 @@
 				80B79CC2178BB69E006FC81A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
