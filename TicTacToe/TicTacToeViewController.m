@@ -62,13 +62,15 @@
         if ([sender isEqual:_botRightField]) {
             [_board updateBoardwithColumn:2 andRow:2];
         }
-        [_board checkForWin:[_board boardArray]];
-        //delegate (takes in board status)  --> has anyone won? --> call npc turn
+        if ([_board checkForWin:[_board boardArray]]) {
+            [_winnerLabel setText:@"Player 1 Wins!"];
+        }
+        //NPCTurn
     } else {
         NSLog(@"%@", [sender currentTitle]);
         NSLog(@"Please select a different square");
     }
-    //NPC's turn
+
 }
 
 @end

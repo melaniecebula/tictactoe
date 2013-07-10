@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TicTacToeBoard.h"
 
 @interface TicTacToeViewController : UIViewController {
     
 }
+ @property (weak, nonatomic) IBOutlet UILabel *winnerLabel;
  @property (weak, nonatomic) IBOutlet UILabel *userScore;
  @property (weak, nonatomic) IBOutlet UILabel *npcScore;
  @property (weak, nonatomic) IBOutlet UIButton *topLeftField;

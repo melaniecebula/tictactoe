@@ -16,5 +16,5 @@
 @property (nonatomic, strong) NSMutableArray *boardArray;
 
 - (void)updateBoardwithColumn:(NSUInteger)column andRow:(NSUInteger)row;
-- (void)checkForWin:(NSMutableArray *)b ;
+- (BOOL)checkForWin:(NSMutableArray *)b ;
 @end

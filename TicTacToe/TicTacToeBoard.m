@@ -7,6 +7,7 @@
 //
 
 #import "TicTacToeBoard.h"
+#import "TicTacToeViewController.h"
 
 @interface TicTacToeBoard () {
     
@@ -39,26 +40,42 @@
     
 }
 
-- (void)checkForWin:(NSMutableArray*)b {
+- (BOOL)checkForWin:(NSMutableArray*)b {
     NSLog(@"checking for win");
     
     if (b[0][0] != '\0' && b[0][0] == b[0][1] && b[0][1]== b[0][2]) {
         NSLog(@"Row 1 wins");
+        return YES;
+        
     }
     if (b[1][0] != '\0' && b[1][0] == b[1][1] && b[1][1] == b[1][2]) {
         NSLog(@"Row 2 wins");
+        return YES;
     }
     if (b[2][0] != '\0' && b[2][0] == b[2][1] && b[2][1] == b[2][2]) {
         NSLog(@"Row 3 wins");
+        return YES;
     }
     if (b[0][0] != '\0' &&  b[0][0] == b[1][0] && b[1][0] == b[2][0]) {
         NSLog(@"Column 1 wins");
+        return YES;
     }
     if (b[0][1] != '\0' &&  b[0][1] == b[1][1] && b[1][1] == b[2][1]) {
         NSLog(@"Column 2 wins");
+        return YES;
     }
     if (b[0][2] != '\0' &&  b[0][2] == b[1][2] && b[1][2] == b[2][2]) {
         NSLog(@"Column 3 wins");
+        return YES;
     }
+    if (b[0][0] != '\0' && b[0][0] == b[1][1] && b[1][1] == b[2][2]) {
+        NSLog(@"Horizontal win!");
+        return YES;
+    }
+    if (b[0][2] != '\0' && b[0][2] == b[1][1] && b[1][1] == b[0][2]) {
+        NSLog(@"Horizontal win!");
+        return YES;
+    }
+    return NO;
 }
 @end
