@@ -10,6 +10,8 @@
 
 #import "TicTacToeAppDelegate.h"
 
+#import "TicTacToeBoard.h"
+
 int main(int argc, char *argv[])
 {
     @autoreleasepool {

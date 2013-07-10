@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TicTacToeBoard : NSObject
+@interface TicTacToeBoard : NSObject {
+    
+    
+}
 
+@property (nonatomic, strong) NSMutableArray *boardArray;
+
+- (void)updateBoardwithColumn:(NSUInteger)column andRow:(NSUInteger)row;
+- (void)checkForWin:(NSMutableArray *)b ;
 @end

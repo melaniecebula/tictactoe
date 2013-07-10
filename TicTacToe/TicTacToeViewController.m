@@ -7,8 +7,11 @@
 //
 
 #import "TicTacToeViewController.h"
+#import "TicTacToeBoard.h"
 
 @interface TicTacToeViewController ()
+
+@property TicTacToeBoard *board;
 
 @end
 
@@ -18,6 +21,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    _board = [[TicTacToeBoard alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -28,17 +32,43 @@
 
 - (IBAction)pressButton:(id)sender {
     if ([sender currentTitle] == NULL) {
-        NSLog(@"hi");
-        NSLog(@"%@", [sender currentTitle]);
         [sender setTitle:@"X" forState:UIControlStateNormal];
-        [sender setTitle:@"X" forState:UIControlStateSelected];
-        [sender setTitle:@"X" forState:UIControlStateHighlighted];
-        [sender setTitle:@"X" forState:UIControlStateReserved];
-        [sender setTitle:@"X" forState:UIControlStateApplication];
+        //update TicTacToe Board's state
+
+        if ([sender isEqual:_topLeftField]) {
+            [_board updateBoardwithColumn:0 andRow:0];
+        }
+        if ([sender isEqual:_topCenterField]) {
+            [_board updateBoardwithColumn:0 andRow:1];
+        }
+        if ([sender isEqual:_topRightField]) {
+            [_board updateBoardwithColumn:0 andRow:2];
+        }
+        if ([sender isEqual:_midLeftField]) {
+            [_board updateBoardwithColumn:1 andRow:0];
+        }
+        if ([sender isEqual:_midCenterField]) {
+            [_board updateBoardwithColumn:1 andRow:1];
+        }
+        if ([sender isEqual:_midRightField]) {
+            [_board updateBoardwithColumn:1 andRow:2];
+        }
+        if ([sender isEqual:_botLeftField]) {
+            [_board updateBoardwithColumn:2 andRow:0];
+        }
+        if ([sender isEqual:_botCenterField]) {
+            [_board updateBoardwithColumn:2 andRow:1];
+        }
+        if ([sender isEqual:_botRightField]) {
+            [_board updateBoardwithColumn:2 andRow:2];
+        }
+        [_board checkForWin:[_board boardArray]];
+        //delegate (takes in board status)  --> has anyone won? --> call npc turn
     } else {
-        //Y U NO WORK
         NSLog(@"%@", [sender currentTitle]);
         NSLog(@"Please select a different square");
     }
+    //NPC's turn
 }
+
 @end
